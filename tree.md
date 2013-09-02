@@ -1,0 +1,17 @@
++ bower_modules
++ node_modules
++ app
+  + components
+    - Application
+      - Application.jsx
+      - Application.scss
+  + js
+    + Arbiter.js
+    + Dispatcher.js
+    + Store.js
+    - Lawnchair.js
++ index.html
++ Gruntfile.js
++ bower.json
++ package.json
++ config.json
