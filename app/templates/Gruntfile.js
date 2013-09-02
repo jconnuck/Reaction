@@ -53,23 +53,29 @@ module.exports = function (grunt) {
       },
       build: {
         files: {
-          'build/components': 'app/components'
+          'build/js/components': 'app/components'
         }
       }
     },
     browserify: {
       main: {
-        src: 'build/components/Application/Application.js',
+        src: 'build/js/components/Application/Application.js',
         dest: 'build/js/main.js',
         options: {
           aliasMappings: [
             {
-              cwd: 'app/lib/react',
-              src: ['*.js']
+              flatten: true,
+              cwd: 'build/js/components',
+              src: ['**/*.js']
             },
             {
               flatten: true,
-              cwd: 'build/components',
+              cwd: 'app/lib',
+              src: ['**/*.js']
+            },
+            {
+              flatten: true,
+              cwd: 'app/stores',
               src: ['**/*.js']
             },
             {
@@ -77,10 +83,6 @@ module.exports = function (grunt) {
               src: ['*.js'],
               dest: 'mixins'
             },
-            {
-              cwd: 'app/lib',
-              src: ['**/*.js']
-            }
           ],
         }
       }

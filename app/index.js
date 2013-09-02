@@ -45,7 +45,10 @@ ReactionGenerator.prototype.app = function app() {
 
 ReactionGenerator.prototype.framework = function framework() {
   this.copy('Application.jsx', 'app/components/Application/Application.jsx');
-  this.copy('grid.scss', 'app/styles/Grid.scss');
+  this.copy('Grid.scss', 'app/styles/Grid.scss');
+  this.copy('Application.scss', 'app/components/Application/Application.scss');
+  this.directory('font-awesome', 'app/styles/font-awesome');
+  this.directory('font-awesome/font', 'build/font');
   this.directory('react', 'app/lib/react');
 
   this.copy('Lawnchair.js', 'app/lib/Lawnchair.js');

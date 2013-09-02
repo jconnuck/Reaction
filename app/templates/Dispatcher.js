@@ -1,5 +1,4 @@
-var Arbiter = require('./Arbiter');
-
+var Arbiter = require('Arbiter');
 var Dispatcher = Arbiter.create();
 
 var dispatchUserEvent = function(publisherData, message, subscriberData) {
