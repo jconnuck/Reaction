@@ -48,7 +48,7 @@ ReactionGenerator.prototype.framework = function framework() {
   this.copy('grid.scss', 'app/styles/Grid.scss');
   this.directory('react', 'app/lib/react');
 
-  this.directory('Lawnchair.js', 'app/lib/Lawnchair.js');
+  this.copy('Lawnchair.js', 'app/lib/Lawnchair.js');
   this.copy('Arbiter.js', 'app/lib/Arbiter.js');
   this.copy('ArbiterMixin.js', 'app/components/mixins/ArbiterMixin.js');
   this.copy('Store.js', 'app/lib/Store.js');
