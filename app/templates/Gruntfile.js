@@ -20,6 +20,7 @@ module.exports = function (grunt) {
         files: [
           'index.html',
           'app/components/**/*',
+          'app/stores/**/*',
           'app/styles/**/*'
         ],
         tasks: ['build']

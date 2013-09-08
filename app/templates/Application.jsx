@@ -5,7 +5,7 @@ var Application = React.createClass({
   render: function () {
     return (
       <div class="Application">
-        Reaction
+        <%= appName %>
       </div>
     );
   }

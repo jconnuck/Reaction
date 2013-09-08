@@ -2,12 +2,11 @@ var Arbiter = require('Arbiter');
 var Dispatcher = Arbiter.create();
 
 var dispatchUserEvent = function(publisherData, message, subscriberData) {
-  var publishMessage = message.replace(/^action/, 'payload');
-  Dispatcher.publish(publishMessage, publisherData);
+  Dispatcher.publish(message, publisherData);
 };
 
 // listen to user actions
-Arbiter.subscribe('action/*', dispatchUserEvent);
+Arbiter.subscribe('*', dispatchUserEvent);
 // TODO listen to server actions
 
 

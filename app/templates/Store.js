@@ -1,6 +1,5 @@
-var Arbiter = require('./Arbiter');
+var Arbiter = require('Arbiter');
 var Lawnchair = require('Lawnchair');
-var Dispatcher = require('Dispatcher');
 
 var Store = Lawnchair;
 
