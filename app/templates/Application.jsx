@@ -1,7 +1,10 @@
 /** @jsx React.DOM */
 var React = require('React');
+var ArbiterMixin = require('mixins/ArbiterMixin');
 
 var Application = React.createClass({
+  mixins: [ArbiterMixin],
+  
   render: function () {
     return (
       <div class="Application">
@@ -9,13 +12,6 @@ var Application = React.createClass({
       </div>
     );
   }
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  React.renderComponent(
-    <Application />, 
-    document.getElementById('<%= _.camelize(_.slugify(appName)) %>')
-  );
 });
 
 module.exports = Application;
